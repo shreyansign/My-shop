@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.KotlinShop" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/first</item>
+        <item name="colorPrimaryVariant">@color/first</item>
+        <item name="colorOnPrimary">@color/third</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/second</item>
+        <item name="colorSecondaryVariant">@color/second</item>
+        <item name="colorOnSecondary">@color/fourth</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
