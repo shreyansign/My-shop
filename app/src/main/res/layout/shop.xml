@@ -2,8 +2,10 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="8dp"
     android:padding="8dp"
     android:layout_width="match_parent"
+    android:background="@color/second"
     android:layout_height="wrap_content">
 
     <LinearLayout
@@ -15,13 +17,15 @@
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_margin="8dp"
             android:layout_weight="1"
+            android:background="@drawable/image_shape"
             tools:srcCompat="@tools:sample/avatars" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="8dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -31,15 +35,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/example"
-                android:textSize="24sp" />
+                android:textColor="@color/first"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:text="@string/example"
-                android:textSize="18sp" />
+                android:textColor="@color/first"
+                android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

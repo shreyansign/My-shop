@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.shop.view.*
 
 class ShoplistAdapter(var shoplistitem: List<PostModel>): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
@@ -12,7 +13,13 @@ class ShoplistAdapter(var shoplistitem: List<PostModel>): RecyclerView.Adapter<R
     class imgviewholder(itemView: View): RecyclerView.ViewHolder(itemView){
         fun bind(postModel: PostModel){
             itemView.name.text = postModel.title
-            itemView.location.text = postModel.loction
+            itemView.location.text = postModel.location
+
+            //load img
+            Glide.with(itemView.context).load(postModel.img).into(itemView.imageView)
+
+            //clip img
+            itemView.imageView.clipToOutline = true
         }
     }
 

@@ -20,8 +20,7 @@ class FirebaseRepo{
 
     fun getshoplist(): Task<QuerySnapshot>{
         return firebaseFirestore
-            .collection("shop list")
-            .orderBy("date", Query.Direction.DESCENDING)
+            .collection("shopList")
             .get()
     }
 }

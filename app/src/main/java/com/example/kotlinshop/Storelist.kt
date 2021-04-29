@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_storelist.*
 
 private const val TAG: String = "HOMEPAGE_LOG"
 
-class Storelist : AppCompatActivity() {
+class Storelist: AppCompatActivity() {
 
     private val firebaseRepo: FirebaseRepo = FirebaseRepo()
 
@@ -42,7 +42,8 @@ class Storelist : AppCompatActivity() {
     private fun loadstorelist(){
         firebaseRepo.getshoplist().addOnCompleteListener {
             if(it.isSuccessful){
-               shoplist  = it.result!!.toObjects(PostModel::class.java)
+                shoplist  = it.result!!.toObjects(PostModel::class.java)
+                Log.d(TAG, "Error: ${shoplist.size}")
                 shoplistAdapter.shoplistitem = shoplist
                 shoplistAdapter.notifyDataSetChanged()
             }else{
